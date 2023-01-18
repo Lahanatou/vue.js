@@ -3,13 +3,13 @@
     <h1>Todoリスト</h1>
     <form @submit.prevent="addTodo()">
       <el-input placeholder="todo" v-model="todo"></el-input>
-    </form> 
+    </form>
     <el-row :gutter="12">
-      <TodoItem v-for="( todo, index ) in todos" :key="index" 
-          @handleClick="removeTodo()" 
-          :todo="todo" 
+      <TodoItem v-for="( todo, index ) in todos" :key="index"
+          @handleClick="removeTodo()"
+          :todo="todo"
           :index="index" />
-      <TodoItem v-for="( issue, index ) in issues" :key="issue.id" 
+      <TodoItem v-for="( issue, index ) in issues" :key="issue.id"
           @handleClick="closeIssue()"
           :todo="issue.title"
           :index="index" />
